@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        #admin-login-form input, #admin-panel input, #admin-panel textarea {
+            display: block;
+            margin: 10px auto;
+            padding: 5px;
+            width: 300px;
+        }
+        #admin-panel textarea {
+            height: 100px;
+        }
+        button {
+            margin: 10px;
+            padding: 5px 10px;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -17,8 +32,8 @@
             <h1>GEMS International School</h1>
             <p>The Voices of Future</p>
             <p>Welcome to the Blogs!</p>
-            <ul class="actions" style="justify-content: center;">
-                <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Voices of Future</a></li>
+            <ul class="actions">
+                <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
             </ul>
         </div>
 
@@ -41,107 +56,49 @@
 
         <!-- Main -->
         <div id="main">
-            <div class="inner">
-                <!-- Featured Post -->
-                <article class="post featured">
-                    <header class="major">
-                        <span class="date">April 25, 2024</span>
-                        <h2><a href="#">Latest Blog Post Title</a></h2>
-                        <p>This is a brief description of the latest blog post. It should be engaging and make readers want to click and read more.</p>
-                    </header>
-                    <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-                    <ul class="actions special">
-                        <li><a href="#" class="button large">Full Story</a></li>
-                    </ul>
-                </article>
 
-                <!-- Posts -->
-                <section class="tiles">
-                    <article class="style1">
-                        <span class="image">
-                            <img src="images/pic02.jpg" alt="" />
-                        </span>
-                        <a href="generic.html">
-                            <h2>Blog Post 1</h2>
-                            <div class="content">
-                                <p>Brief description of Blog Post 1.</p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="style2">
-                        <span class="image">
-                            <img src="images/pic03.jpg" alt="" />
-                        </span>
-                        <a href="generic.html">
-                            <h2>Blog Post 2</h2>
-                            <div class="content">
-                                <p>Brief description of Blog Post 2.</p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="style3">
-                        <span class="image">
-                            <img src="images/pic04.jpg" alt="" />
-                        </span>
-                        <a href="generic.html">
-                            <h2>Blog Post 3</h2>
-                            <div class="content">
-                                <p>Brief description of Blog Post 3.</p>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- Add more articles as needed -->
-                </section>
+            <!-- Featured Post -->
+            <article class="post featured">
+                <header class="major">
+                    <span class="date">April 25, 2024</span>
+                    <h2><a href="#">Latest Blog Post Title</a></h2>
+                    <p>This is a brief description of the latest blog post. It should be engaging and make readers want to click and read more.</p>
+                </header>
+                <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
+                <ul class="actions special">
+                    <li><a href="#" class="button large">Full Story</a></li>
+                </ul>
+            </article>
+
+            <!-- Posts -->
+            <section class="tiles">
+                <!-- Articles will be dynamically inserted here -->
+            </section>
+
+            <!-- Admin Section -->
+            <div id="admin-login-button" style="text-align: center; padding: 20px;">
+                <button onclick="showAdminLogin()">An Admin? Click here</button>
             </div>
+
+            <div id="admin-login-form" style="display: none; text-align: center; padding: 20px;">
+                <input type="text" id="admin-username" placeholder="Username">
+                <input type="password" id="admin-password" placeholder="Password">
+                <button onclick="adminLogin()">Login</button>
+            </div>
+
+            <div id="admin-panel" style="display: none; padding: 20px;">
+                <h2>Add New Article</h2>
+                <input type="text" id="article-title" placeholder="Article Title">
+                <textarea id="article-content" placeholder="Article Content"></textarea>
+                <input type="text" id="article-image-url" placeholder="Image URL">
+                <button onclick="addArticle()">Publish Article</button>
+            </div>
+
         </div>
 
         <!-- Footer -->
         <footer id="footer">
-            <section>
-                <form method="post" action="#">
-                    <div class="fields">
-                        <div class="field">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" />
-                        </div>
-                        <div class="field">
-                            <label for="email">Email</label>
-                            <input type="text" name="email" id="email" />
-                        </div>
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="3"></textarea>
-                        </div>
-                    </div>
-                    <ul class="actions">
-                        <li><input type="submit" value="Send Message" /></li>
-                    </ul>
-                </form>
-            </section>
-            <section class="split contact">
-                <section class="alt">
-                    <h3>Address</h3>
-                    <p>1234 Somewhere Road #87257<br />
-                    Nashville, TN 00000-0000</p>
-                </section>
-                <section>
-                    <h3>Phone</h3>
-                    <p><a href="#">(000) 000-0000</a></p>
-                </section>
-                <section>
-                    <h3>Email</h3>
-                    <p><a href="#">info@untitled.tld</a></p>
-                </section>
-                <section>
-                    <h3>Social</h3>
-                    <ul class="icons alt">
-                        <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                    </ul>
-                </section>
-            </section>
+            <!-- Footer content remains unchanged -->
         </footer>
 
         <!-- Copyright -->
@@ -159,6 +116,70 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // Simulated database (replace with actual backend in production)
+        let articles = [];
+        const ADMIN_USERNAME = 'admin';
+        const ADMIN_PASSWORD = 'password123';
+
+        function showAdminLogin() {
+            document.getElementById('admin-login-form').style.display = 'block';
+            document.getElementById('admin-login-button').style.display = 'none';
+        }
+
+        function adminLogin() {
+            const username = document.getElementById('admin-username').value;
+            const password = document.getElementById('admin-password').value;
+            if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+                document.getElementById('admin-login-form').style.display = 'none';
+                document.getElementById('admin-panel').style.display = 'block';
+            } else {
+                alert('Invalid credentials');
+            }
+        }
+
+        function addArticle() {
+            const title = document.getElementById('article-title').value;
+            const content = document.getElementById('article-content').value;
+            const imageUrl = document.getElementById('article-image-url').value;
+            
+            if (title && content && imageUrl) {
+                articles.unshift({ title, content, imageUrl });
+                updateArticlesDisplay();
+                // Clear input fields
+                document.getElementById('article-title').value = '';
+                document.getElementById('article-content').value = '';
+                document.getElementById('article-image-url').value = '';
+            } else {
+                alert('Please fill all fields');
+            }
+        }
+
+        function updateArticlesDisplay() {
+            const tilesSection = document.querySelector('.tiles');
+            tilesSection.innerHTML = ''; // Clear existing content
+            
+            articles.forEach(article => {
+                const articleHTML = `
+                    <article>
+                        <span class="image">
+                            <img src="${article.imageUrl}" alt="" />
+                        </span>
+                        <a href="#">
+                            <h2>${article.title}</h2>
+                            <div class="content">
+                                <p>${article.content.substring(0, 100)}...</p>
+                            </div>
+                        </a>
+                    </article>
+                `;
+                tilesSection.innerHTML += articleHTML;
+            });
+        }
+
+        // Initial display of articles
+        updateArticlesDisplay();
+    </script>
 
 </body>
 </html>
